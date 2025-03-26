@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../src/styles/main.css">
+    <link rel="stylesheet" href="../src/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladies' Store</title>
+    <link rel="icon" href="icon-img/icon-shop.png" type="image/x-icon">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1>NgaLady Shop</h1>
+        <p>Kính chào quý khách</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Trang Chủ</a></li>
+            <li><a href="contact.html">Liên Hệ</a></li>
+            <li><a href="history.html">Lịch Sử Đơn Hàng</a></li>
+            <li><a href="cart.html">
+                <div class="cart">
+                    🛒 <span id="cart-count">0</span> Giỏ Hàng
+                    <div id="cart-dropdown" class="cart-dropdown">
+                        <!-- Giỏ hàng sẽ được hiển thị ở đây -->
+                    </div>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+    
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h2>Chào mừng đến với NgaLady Shop</h2>
+        <p>Khám phá bộ sưu tập mới nhất với nhiều ưu đãi hấp dẫn</p>
+        <button class="cta-button">Mua sắm ngay</button>
+    </div>
+    
+    <!-- Categories Section -->
+    <div class="category-container">
+        <h2>DANH MỤC</h2>
+        <div class="categories">
+            <div class="category-item">
+                <img src="../public/images/icon-div-women.png" alt="Thời Trang Nữ">
+                <span>Thời Trang Nữ</span>
+            </div>
+            <div class="category-item">
+                <img src="../public/images/icon-div-men.png" alt="Thời Trang Nam">
+                <span>Thời Trang Nam</span>
+            </div>
+            <div class="category-item">
+                <img src="../public/images/icon-div-jewelryA.webp" alt="Trang Sức">
+                <span>Trang Sức</span>
+            </div>
+            <div class="category-item">
+                <img src="../public/images/div-lipstick.png" alt="Mỹ Phẩm">
+                <span>Mỹ Phẩm</span>
+            </div>
+            <div class="category-item">
+                <img src="../public/images/div-blanket.png" alt="Chăn Ga & Gối Nệm">
+                <span>Chăn Ga & Gối Nệm</span>
+            </div>
+            <div class="category-item">
+                <img src="../public/images/ec40036f-cdb2-4a68-aff6-73e65c2d3d36.webp" alt="Thực Phẩm Chức Năng">
+                <span>Thực Phẩm Chức Năng</span>
+            </div>
+            <div class="category-item">
+                <img src="../public/images/div-snacks.png" alt="Đồ Ăn Vặt">
+                <span>Đồ Ăn Vặt</span>
+            </div>
+            <div class="category-item">
+                <img src="../public/images/div-phone accessories.png" alt="Phụ Kiện Điện Thoại">
+                <span>Phụ Kiện Điện Thoại</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Featured Products Slideshow -->
+    <h2 class="featured-title">Sản phẩm nổi bật</h2>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="https://img-1.kwcdn.com/product/fancy/6af0f3a0-fd50-44a4-b14a-85b5a3e2eb6e.jpg?imageView2/2/w/800/q/70/format/webp" alt="Áo thun nữ thời trang">
+            <div class="text">Áo thun nữ thời trang mới nhất</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="https://img.kwcdn.com/product/fancy/345792c2-c25c-481d-9578-da6df13cb8b9.jpg?imageView2/2/w/800/q/70/format/webp" alt="Váy đầm dự tiệc">
+            <div class="text">Váy đầm dự tiệc sang trọng</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="https://img.kwcdn.com/product/fancy/b7201610-6bf7-414d-8da0-ba6fd9939fcc.jpg?imageView2/2/w/800/q/70/format/webp" alt="Áo khoác nữ">
+            <div class="text">Áo khoác nữ phong cách Hàn Quốc</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 5</div>
+            <img src="https://img.kwcdn.com/product/fancy/74fc1701-90fc-47e5-ac99-ab71bea7ed85.jpg?imageView2/2/w/800/q/70/format/webp" alt="Túi xách thời trang">
+            <div class="text">Túi xách thời trang cao cấp</div>
+        </div>
+        <div class="mySlides fade">
+            <div class="numbertext">5 / 5</div>
+            <img src="https://img.kwcdn.com/product/fancy/aa294631-7497-41a4-8d1b-a07659eaef66.jpg?imageView2/2/w/800/q/70/format/webp" alt="Giày nữ">
+            <div class="text">Giày nữ thời trang mới nhất</div>
+        </div>
+        
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    
+    <!-- Products Section -->
+    <h2 class="featured-title">Sản phẩm bán chạy</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <img src="https://img.kwcdn.com/product/open/2024-06-19/1718790110568-781c4c7aab5b4ba593cef82aba25990e-goods.jpeg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="Áo thun nam">
+            <div class="product-info">
+                <h3>Áo thun nam</h3>
+                <p>Giá: 250.000đ</p>
+                <button class="add-to-cart">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://img.kwcdn.com/product/fancy/d0cb052b-6925-4b84-a52e-170d288fd151.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="Áo Polo Nam">
+            <div class="product-info">
+                <h3>Áo Polo Nam</h3>
+                <p>Giá: 350.000đ</p>
+                <button class="add-to-cart">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://img.kwcdn.com/product/fancy/089f379f-4126-410c-b6ab-dc9d9c54a8bd.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" alt="Quần Nam">
+            <div class="product-info">
+                <h3>Quần Nam</h3>
+                <p>Giá: 300.000đ</p>
+                <button class="add-to-cart">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+        
+        <div class="product-card">
+            <img src="https://img.kwcdn.com/product/fancy/b7201610-6bf7-414d-8da0-ba6fd9939fcc.jpg?imageView2/2/w/800/q/70/format/webp" alt="Áo khoác nữ">
+            <div class="product-info">
+                <h3>Áo khoác nữ</h3>
+                <p>Giá: 450.000đ</p>
+                <button class="add-to-cart">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
+    </div>
+   
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+        <h3>Đăng ký nhận thông tin</h3>
+        <p>Đăng ký để nhận thông tin về sản phẩm mới và ưu đãi đặc biệt từ NgaLady Shop</p>
+        <form class="newsletter-form">
+            <input type="email" placeholder="Nhập địa chỉ email của bạn">
+            <button type="submit">Đăng ký</button>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Về chúng tôi</h3>
+                <p>NgaLady Shop - Cửa hàng thời trang và mỹ phẩm hàng đầu dành cho phái đẹp.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liên kết nhanh</h3>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="#">Chính sách</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Thành Phố Từ Sơn, Tỉnh Bắc Ninh</li>
+                    <li><i class="fas fa-phone"></i> +84 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@ngaladyshop.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 NgaLady Shop. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    
+    <script src="../src/pages/cart.js"></script>
+    <script src="../src/pages/indexjs.js"></script>
+    <script src="../src/pages/slideimg.js"></script>
+    <script src="../src/pages/cartdropdown.js"></script>
+</body>
+</html>

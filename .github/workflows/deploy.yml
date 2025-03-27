@@ -8,28 +8,30 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    # Cấp quyền ghi cho nội dung và pages
     permissions:
       contents: write
+      pages: write
 
     steps:
-      - name: Checkout code
+      # Bước 1: Checkout code
+      - name: Check out repository
         uses: actions/checkout@v3
 
+      # Bước 2: Cài đặt dependencies
       - name: Install dependencies
         run: npm install
         working-directory: ./client
 
+      # Bước 3: Build dự án
       - name: Build project
         run: npm run build
         working-directory: ./client
 
+      # Bước 4: Deploy lên GitHub Pages
       - name: Deploy to GitHub Pages
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push origin gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages             # Nhánh sẽ chứa build
+          folder: ./client/build       # Thư mục build (sinh ra sau npm run build)
+          token: ${{ secrets.GITHUB_TOKEN }}

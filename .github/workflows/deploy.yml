@@ -18,11 +18,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./path/to/your/package.json
+        working-directory: ./client
 
       - name: Build project
         run: npm run build
-        working-directory: ./path/to/your/package.json
+        working-directory: ./client
 
       - name: Deploy to GitHub Pages
         run: |

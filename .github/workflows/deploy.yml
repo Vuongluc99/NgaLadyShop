@@ -20,18 +20,14 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: ./
+      working-directory: ./client
 
     - name: Build project
       run: npm run build
-      working-directory: ./
+      working-directory: ./client
 
     - name: Deploy to GitHub Pages
-      run: |
-        git config --global user.name 'github-actions[bot]'
-        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-        git commit -m "Deploy to GitHub Pages"
-        git push origin `gh-pages`
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      working-directory: ./
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./client/build

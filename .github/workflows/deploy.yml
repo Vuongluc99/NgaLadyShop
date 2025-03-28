@@ -26,7 +26,6 @@ jobs:
       run: npm run build
       working-directory: ./client
 
-
     - name: Verify build output
       run: ls -la ./client/build && test -f ./client/build/index.html
       working-directory: .
@@ -36,8 +35,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./client/build
-<<<<<<< HEAD
         cname: ngaladyshop.com
-=======
-        cname: ngaladyshop.com
->>>>>>> 76c8a811476d3bca0e56a0e08458528743c4d229

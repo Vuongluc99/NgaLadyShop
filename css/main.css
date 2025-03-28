@@ -175,13 +175,13 @@ nav ul li a {
 .mySlides {
   display: none;
   width: 100%; /* Đảm bảo slide chiếm toàn bộ chiều rộng */
-  height: 100%; /* Giữ tỉ lệ khung hình */
+  height: auto; /* Giữ tỉ lệ khung hình */
 }
 
 /* Chỉnh cho slide hiện ra đầy đủ */
 .mySlides img {
     width: 100%;
-    height: 444px;
+    height: 344px;
     object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
 }
 

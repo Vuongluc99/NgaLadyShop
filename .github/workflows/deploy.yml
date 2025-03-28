@@ -9,27 +9,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./client
-
-      - name: Build project
-        run: npm run build
-        working-directory: ./client
-
-      - name: Deploy to GitHub Pages
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-          git push origin gh-pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Build and Deploy
+      run: |
+        npm install
+        npm run build
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add -A
+        git commit -m "Deploy to GitHub Pages"
+        git push origin `gh-pages`

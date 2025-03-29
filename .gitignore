@@ -9,6 +9,7 @@ jspm_packages/
 .env.test.local
 .env.production.local
 server/config/.env
+.env.example
 
 # Logs
 logs
@@ -28,6 +29,9 @@ pids
 
 # Optional eslint cache
 .eslintcache
+
+# Prettier cache
+.prettiercache
 
 # Build outputs
 dist/

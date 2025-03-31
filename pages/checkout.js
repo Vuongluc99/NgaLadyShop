@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (selectedPayment === "cod") {
             paymentDetailsContainer.innerHTML = `
                 <div style="text-align: center;">
-                    <img src="img/icon-img/icon-shop.png" alt="COD" style="width: 60px; height: auto; margin-bottom: 10px;">
+                    <img src="icons/icon-shop.png" alt="COD" style="width: 60px; height: auto; margin-bottom: 10px;">
                     <p style="margin: 0; font-weight: bold;">Thanh toán khi nhận hàng</p>
                     <p style="margin: 5px 0 0;">Bạn sẽ thanh toán số tiền <strong>${finalTotal.toLocaleString()}đ</strong> khi nhận hàng</p>
                 </div>

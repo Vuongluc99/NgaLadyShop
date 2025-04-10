@@ -6,19 +6,24 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ladies' Store</title>
-    <link rel="icon" href="../public/icons/icon-shop.png" type="image/x-icon">
+    <link rel="icon" href="icons/icon-shop.png" type="image/x-icon">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 <body>
-    <div id="root"></div>
     <header>
         <h1>NgaLady Shop</h1>
         <p>Kính chào quý khách</p>
     </header>
     
     <nav>
+            <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" placeholder="Tìm kiếm sản phẩm...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+    
         <ul>
             <li><a href="index.html">Trang Chủ</a></li>
             <li><a href="contact.html">Liên Hệ</a></li>
@@ -35,12 +40,6 @@
         </ul>
     </nav>
     
-    <!-- Search Bar -->
-    <div class="search-container">
-        <input type="text" placeholder="Tìm kiếm sản phẩm...">
-        <button type="submit"><i class="fas fa-search"></i></button>
-    </div>
-    
     <!-- Hero Section -->
     <div class="hero-section">
         <h2>Chào mừng đến với NgaLady Shop</h2>
@@ -52,8 +51,8 @@
     <div class="category-container">
         <h2>DANH MỤC</h2>
         <div class="categories">
-            <div class="category-item">
-                <img src="images/icon-div-women.png" alt="Thời Trang Nữ">
+            <a href ="LadyFashion.html"><div class="category-item">
+                <img src="images/icon-div-women.png" alt="Thời Trang Nữ"></a>
                 <span>Thời Trang Nữ</span>
             </div>
             <div class="category-item">
@@ -221,7 +220,7 @@
     </footer>
     
     <script src="pages/cart.js"></script>
-    <script src="pages/indexjs.js"></script>
+    <script src="pages/index.js"></script>
     <script src="pages/slideimg.js"></script>
     <script src="pages/cartdropdown.js"></script>
 </body>

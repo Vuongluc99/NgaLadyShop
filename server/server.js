@@ -5,6 +5,18 @@
  * It configures Express, connects to the database,
  * sets up middleware and routes, and starts the server.
  */
+// Importing necessary modules
+// ... other imports ...
+const express = require('express');
+const { Op } = require('sequelize');
+
+// ... other code ...
+
+// Your server logic here
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
 
 // Load environment variables
 require('dotenv').config({ path: './config/.env' });

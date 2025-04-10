@@ -1,0 +1,509 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Layout Container */
+.lf-container { /* Assuming HTML: <div class="lf-container"> */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button, input[type="checkbox"], input[type="number"] {
+    font-family: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Top Bar Block --- */
+.lf-top-bar { /* Block - Assuming HTML: <header class="lf-top-bar"> */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Element: Category Menu */
+.lf-top-bar__category-menu { /* Assuming HTML: <div class="lf-top-bar__category-menu"> */
+    /* Styles for the container if needed */
+}
+
+.lf-top-bar__category-button { /* Assuming HTML: <button class="lf-top-bar__category-button"> */
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+.lf-top-bar__category-button i { /* Styling icon within button */
+    margin-right: 5px;
+}
+
+/* Element: Sort Options */
+.lf-top-bar__sort-options { /* Assuming HTML: <div class="lf-top-bar__sort-options"> */
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.lf-top-bar__sort-label { /* Assuming HTML: <span class="lf-top-bar__sort-label"> */
+    margin-right: 10px;
+    color: #555;
+    font-size: 0.9em;
+    padding-left: 5px;
+}
+
+.lf-top-bar__sort-button { /* Assuming HTML: <button class="lf-top-bar__sort-button"> */
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 6px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Modifier: Active Sort Button */
+.lf-top-bar__sort-button--active { /* Assuming HTML: <button class="lf-top-bar__sort-button lf-top-bar__sort-button--active"> */
+    background-color: #ee4d2d;
+    color: white;
+    border-color: #ee4d2d;
+}
+
+.lf-top-bar__sort-button:hover:not(.lf-top-bar__sort-button--active) {
+    background-color: #f0f0f0;
+}
+
+/* Element: Pagination */
+.lf-top-bar__pagination { /* Assuming HTML: <div class="lf-top-bar__pagination"> */
+    display: flex;
+    align-items: center;
+}
+
+.lf-top-bar__page-info { /* Assuming HTML: <span class="lf-top-bar__page-info"> */
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.lf-top-bar__page-button { /* Assuming HTML: <button class="lf-top-bar__page-button"> */
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #555;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* Modifier: Disabled Page Button */
+.lf-top-bar__page-button--disabled { /* Assuming HTML: <button class="lf-top-bar__page-button lf-top-bar__page-button--disabled" disabled> */
+    color: #ccc;
+    cursor: not-allowed;
+    /* Styles for disabled state already applied by [disabled] attribute, but BEM class allows extra styling */
+}
+
+/* --- Main Content Layout --- */
+.lf-main-content { /* Layout Helper - Assuming HTML: <main class="lf-main-content"> */
+    display: flex;
+    gap: 20px;
+}
+
+/* --- Sidebar Block --- */
+.lf-sidebar { /* Block - Assuming HTML: <aside class="lf-sidebar"> */
+    flex: 0 0 220px;
+    font-size: 0.9em;
+}
+
+/* Element: Clear Filters Button */
+.lf-sidebar__clear-button { /* Assuming HTML: <button class="lf-sidebar__clear-button"> */
+     width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Or your theme color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 15px;
+}
+.lf-sidebar__clear-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Filter Group Block (used within Sidebar) --- */
+.lf-filter-group { /* Block - Assuming HTML: <section class="lf-filter-group"> */
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.lf-filter-group:last-child {
+    border-bottom: none;
+}
+
+/* Element: Title */
+.lf-filter-group__title { /* Assuming HTML: <h3 class="lf-filter-group__title"> */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    margin-top: 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+.lf-filter-group__title i { /* Icon within title */
+    margin-right: 8px;
+    color: #888;
+}
+
+/* Element: List (for categories) */
+.lf-filter-group__list { /* Assuming HTML: <ul class="lf-filter-group__list"> */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Element: List Item (category item) */
+.lf-filter-group__item { /* Assuming HTML: <li class="lf-filter-group__item"> */
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Modifier: Active List Item */
+.lf-filter-group__item--active { /* Assuming HTML: <li class="lf-filter-group__item lf-filter-group__item--active"> */
+    color: #ee4d2d;
+    font-weight: bold;
+}
+
+/* Element: "More" Link */
+.lf-filter-group__more-link { /* Assuming HTML: <a href="#" class="lf-filter-group__more-link"> */
+    color: #555;
+    font-size: 0.95em;
+    display: block; /* Make it block for easier clicking if needed */
+    margin-top: 8px; /* Adjust as needed */
+}
+.lf-filter-group__more-link i { /* Icon within link */
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+
+/* Element: Sub-Filter Section */
+.lf-filter-group__sub-filter { /* Assuming HTML: <div class="lf-filter-group__sub-filter"> */
+    margin-top: 15px;
+}
+
+/* Element: Sub-Filter Title */
+.lf-filter-group__sub-title { /* Assuming HTML: <h4 class="lf-filter-group__sub-title"> */
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: normal;
+}
+
+/* Element: Filter Option (Label + Input) */
+.lf-filter-group__option { /* Assuming HTML: <label class="lf-filter-group__option"> */
+    display: block;
+    margin-bottom: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Element: Checkbox Input */
+.lf-filter-group__checkbox { /* Assuming HTML: <input type="checkbox" class="lf-filter-group__checkbox"> */
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #ee4d2d;
+}
+
+/* --- Price Range Block (used within Filter Group) --- */
+.lf-price-range { /* Block - Assuming HTML: <div class="lf-price-range"> */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+/* Element: Input */
+.lf-price-range__input { /* Assuming HTML: <input type="number" class="lf-price-range__input"> */
+    width: 70px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9em;
+    -moz-appearance: textfield;
+}
+.lf-price-range__input::-webkit-outer-spin-button,
+.lf-price-range__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Element: Apply Button */
+.lf-price-range__apply-button { /* Assuming HTML: <button class="lf-price-range__apply-button"> */
+    width: 100%;
+    padding: 8px;
+    background-color: #ee4d2d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    margin-top: 5px; /* Or associate directly with lf-price-range parent */
+}
+.lf-price-range__apply-button:hover {
+    background-color: #d73210;
+}
+
+/* --- Product Grid Block --- */
+.lf-product-grid { /* Block - Assuming HTML: <section class="lf-product-grid"> */
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+/* --- Product Card Block --- */
+.lf-product-card { /* Block - Assuming HTML: <div class="lf-product-card"> */
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+.lf-product-card:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-color: #ccc;
+}
+
+/* Element: Image Wrapper */
+.lf-product-card__image-wrapper { /* Assuming HTML: <div class="lf-product-card__image-wrapper"> */
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Aspect ratio 1:1 */
+    overflow: hidden;
+}
+
+/* Element: Image */
+.lf-product-card__image { /* Assuming HTML: <img class="lf-product-card__image" src="..." alt="..."> */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Element: Badge (base style if needed, modifiers below define specifics) */
+.lf-product-card__badge {
+    position: absolute;
+    padding: 2px 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    border-radius: 2px; /* Consistent radius */
+}
+
+/* Modifier: Discount Badge */
+.lf-product-card__badge--discount { /* Assuming HTML: <span class="lf-product-card__badge lf-product-card__badge--discount"> */
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 212, 36, 0.9);
+    color: #ee4d2d;
+    border-bottom-left-radius: 4px; /* Specific radius for corner */
+    /* Triangle styles (optional, can be complex with pure CSS) */
+}
+/* Example triangle (adjust as needed) */
+.lf-product-card__badge--discount::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -4px;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 4px 4px 0;
+    border-color: transparent rgba(255, 212, 36, 0.9) transparent transparent;
+}
+.lf-product-card__badge--discount::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: 0;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 4px 4px 0 0;
+    border-color: rgba(255, 212, 36, 0.9) transparent transparent transparent;
+}
+
+
+/* Modifier: Size Badge */
+.lf-product-card__badge--size { /* Assuming HTML: <span class="lf-product-card__badge lf-product-card__badge--size"> */
+    bottom: 5px;
+    left: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 0.75em; /* Slightly smaller */
+}
+
+/* --- Tag Block (reusable) --- */
+.lf-tag { /* Block - Assuming HTML: <span class="lf-tag"> */
+    display: inline-block; /* Ensure proper spacing */
+    font-size: 0.75em;
+    padding: 2px 4px;
+    border-radius: 2px;
+    margin-right: 4px; /* Spacing between tags */
+    margin-bottom: 4px; /* Spacing if tags wrap */
+    white-space: nowrap;
+    line-height: 1.2; /* Adjust line height */
+}
+
+/* Modifier: Favorite Tag (used on Product Card or standalone) */
+.lf-tag--favorite { /* Assuming HTML: <span class="lf-tag lf-tag--favorite"> */
+    background-color: #ee4d2d;
+    color: white;
+    /* If used as badge on image, needs positioning: */
+     /* position: absolute; top: 5px; left: 5px; */
+     /* Decide based on HTML structure if it's always on image or in info */
+}
+/* Example if always on image: */
+.lf-product-card__image-wrapper .lf-tag--favorite {
+     position: absolute;
+     top: 5px;
+     left: 5px;
+}
+
+
+/* Modifier: Promo Tag */
+.lf-tag--promo { /* Assuming HTML: <span class="lf-tag lf-tag--promo"> */
+    border: 1px solid #ee4d2d;
+    color: #ee4d2d;
+}
+
+/* Modifier: Mall Tag */
+.lf-tag--mall { /* Assuming HTML: <span class="lf-tag lf-tag--mall"> */
+    background-color: #d0011b;
+    color: white;
+    font-weight: bold;
+}
+
+/* --- Product Card Elements (Continued) --- */
+
+/* Element: Info Section */
+.lf-product-card__info { /* Assuming HTML: <div class="lf-product-card__info"> */
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Element: Title */
+.lf-product-card__title { /* Assuming HTML: <p class="lf-product-card__title"> */
+    font-size: 0.9em;
+    margin: 0 0 5px 0;
+    line-height: 1.3;
+    height: 2.6em; /* 2 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Element: Labels Container */
+.lf-product-card__labels { /* Assuming HTML: <div class="lf-product-card__labels"> */
+    margin-bottom: 5px;
+    min-height: 18px; /* Reserve space */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px; /* Use gap for spacing tags */
+}
+
+/* Element: Price Container */
+.lf-product-card__price { /* Assuming HTML: <div class="lf-product-card__price"> */
+    display: flex;
+    align-items: baseline;
+    margin-top: auto; /* Push to bottom */
+    margin-bottom: 5px;
+}
+
+/* Element: Current Price */
+.lf-product-card__current-price { /* Assuming HTML: <span class="lf-product-card__current-price"> */
+    font-size: 1.1em;
+    color: #ee4d2d;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Element: Original Price */
+.lf-product-card__original-price { /* Assuming HTML: <del class="lf-product-card__original-price"> */
+    font-size: 0.85em;
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* Element: Sold Count */
+.lf-product-card__sold-count { /* Assuming HTML: <p class="lf-product-card__sold-count"> */
+    font-size: 0.8em;
+    color: #888;
+    margin: 0;
+    text-align: right;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .lf-main-content {
+        flex-direction: column;
+    }
+    .lf-sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .lf-product-grid {
+         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .lf-top-bar {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .lf-top-bar__sort-options {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: space-around; /* Or flex-start */
+    }
+     .lf-top-bar__pagination {
+         width: 100%; /* Take full width when wrapped */
+         justify-content: flex-end; /* Align pagination to the right */
+         margin-top: 10px;
+    }
+    .lf-top-bar__category-menu {
+        /* Adjust if needed on small screens */
+    }
+
+}

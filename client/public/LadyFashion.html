@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladies' Store</title>
+    <link rel="icon" href="icons/icon-shop.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bem-lf.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <header>
+            <h1>NgaLady Shop</h1>
+            <p>Kính chào quý khách</p>
+        </header>
+        
+        <nav>
+                <!-- Search Bar -->
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm sản phẩm...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        
+            <ul>
+                <li><a href="index.html">Trang Chủ</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+                <li><a href="history.html">Lịch Sử Đơn Hàng</a></li>
+                <li><a href="cart.html">
+                    <div class="cart">
+                        🛒 <span id="cart-count">0</span> Giỏ Hàng
+                        <div id="cart-dropdown" class="cart-dropdown">
+                            <!-- Giỏ hàng sẽ được hiển thị ở đây -->
+                        </div>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+    <div class="lf-container">
+        <header class="lf-top-bar">
+            <div class="lf-top-bar__category-menu">
+                <button class="lf-top-bar__category-button"><i class="fas fa-bars"></i> Tất Cả Danh Mục</button>
+                </div>
+            <div class="lf-top-bar__sort-options">
+                <span class="lf-top-bar__sort-label">Sắp xếp theo</span>
+                <button class="lf-top-bar__sort-button lf-top-bar__sort-button--active">Phổ Biến</button>
+                <button class="lf-top-bar__sort-button">Mới Nhất</button>
+                <button class="lf-top-bar__sort-button">Bán Chạy</button>
+                <button class="lf-top-bar__sort-button">Giá <i class="fas fa-caret-down"></i></button>
+            </div>
+            <div class="lf-top-bar__pagination">
+                <span class="lf-top-bar__page-info">1/8</span>
+                 <button class="lf-top-bar__page-button lf-top-bar__page-button--disabled" disabled>&lt;</button>
+                <button class="lf-top-bar__page-button">&gt;</button>
+            </div>
+        </header>
+
+        <main class="lf-main-content">
+            <aside class="lf-sidebar">
+                <section class="lf-filter-group">
+                    <h3 class="lf-filter-group__title"><i class="fas fa-list"></i> Danh Mục</h3>
+                    <ul class="lf-filter-group__list">
+                         <li class="lf-filter-group__item lf-filter-group__item--active">Thời Trang Nữ</li>
+                        <li class="lf-filter-group__item">Quần</li>
+                        <li class="lf-filter-group__item">Quần đùi</li>
+                        <li class="lf-filter-group__item">Chân váy</li>
+                        <li class="lf-filter-group__item">Quần jeans</li>
+                        <li class="lf-filter-group__item">Đầm/Váy</li>
+                        <li class="lf-filter-group__item">
+                            <a href="#" class="lf-filter-group__more-link">Thêm <i class="fas fa-chevron-down"></i></a>
+                        </li>
+                    </ul>
+                </section>
+
+                 <section class="lf-filter-group">
+                     <h3 class="lf-filter-group__title"><i class="fas fa-filter"></i> BỘ LỌC TÌM KIẾM</h3>
+                    <div class="lf-filter-group__sub-filter">
+                         <h4 class="lf-filter-group__sub-title">Nơi Bán</h4>
+                         <label class="lf-filter-group__option">
+                            <input type="checkbox" class="lf-filter-group__checkbox"> Hà Nội
+                        </label>
+                        <label class="lf-filter-group__option">
+                            <input type="checkbox" class="lf-filter-group__checkbox"> TP. Hồ Chí Minh
+                        </label>
+                        <label class="lf-filter-group__option">
+                            <input type="checkbox" class="lf-filter-group__checkbox"> Quận Hà Đông
+                        </label>
+                        <label class="lf-filter-group__option">
+                            <input type="checkbox" class="lf-filter-group__checkbox"> Quận Hoàng Mai
+                        </label>
+                        <a href="#" class="lf-filter-group__more-link">Thêm <i class="fas fa-chevron-down"></i></a>
+                    </div>
+                     <div class="lf-filter-group__sub-filter">
+                        <h4 class="lf-filter-group__sub-title">Đơn Vị Vận Chuyển</h4>
+                        <label class="lf-filter-group__option">
+                            <input type="checkbox" class="lf-filter-group__checkbox"> Hỏa Tốc
+                        </label>
+                        <label class="lf-filter-group__option">
+                            <input type="checkbox" class="lf-filter-group__checkbox"> Nhanh
+                        </label>
+                        <label class="lf-filter-group__option">
+                            <input type="checkbox" class="lf-filter-group__checkbox"> Tiết Kiệm
+                        </label>
+                    </div>
+                    <div class="lf-filter-group__sub-filter">
+                        <h4 class="lf-filter-group__sub-title">Khoảng Giá</h4>
+                        <div class="lf-price-range">
+                             <input type="number" class="lf-price-range__input" placeholder="₫ TỪ">
+                            <span>-</span>
+                            <input type="number" class="lf-price-range__input" placeholder="₫ ĐẾN">
+                        </div>
+                         <button class="lf-price-range__apply-button">ÁP DỤNG</button>
+                    </div>
+                     <div class="lf-filter-group__sub-filter">
+                        <h4 class="lf-filter-group__sub-title">Loại Shop</h4>
+                         <label class="lf-filter-group__option">
+                             <input type="checkbox" class="lf-filter-group__checkbox"> Mall
+                         </label>
+                         <label class="lf-filter-group__option">
+                             <input type="checkbox" class="lf-filter-group__checkbox"> Yêu Thích
+                         </label>
+                    </div>
+                 </section>
+
+                <button class="lf-sidebar__clear-button">XÓA TẤT CẢ</button>
+            </aside>
+
+            <section class="lf-product-grid">
+                <div class="lf-product-card">
+                     <div class="lf-product-card__image-wrapper">
+                         <img class="lf-product-card__image" src="https://via.placeholder.com/188x188.png?text=Sản+phẩm+1" alt="Tất Nike">
+                         <span class="lf-product-card__badge lf-product-card__badge--discount">-41%</span>
+                         <span class="lf-tag lf-tag--favorite">Yêu thích</span>
+                    </div>
+                     <div class="lf-product-card__info">
+                         <p class="lf-product-card__title">Tất Nike Nam Nữ Cổ Cao Cổ Trung Cổ Ngắn Chất...</p>
+                        <div class="lf-product-card__labels">
+                            <span class="lf-tag lf-tag--promo">Rẻ Vô Địch</span>
+                            <span class="lf-tag lf-tag--promo">Giảm ₫5k</span>
+                        </div>
+                        <div class="lf-product-card__price">
+                             <span class="lf-product-card__current-price">₫4.690</span>
+                            </div>
+                        <p class="lf-product-card__sold-count">Đã bán 56,4k</p>
+                    </div>
+                </div>
+
+                <div class="lf-product-card">
+                    <div class="lf-product-card__image-wrapper">
+                        <img class="lf-product-card__image" src="https://via.placeholder.com/188x188.png?text=Sản+phẩm+2" alt="Tất nam nữ">
+                         <span class="lf-product-card__badge lf-product-card__badge--discount">-35%</span>
+                         <span class="lf-tag lf-tag--favorite">Yêu thích</span>
+                     </div>
+                    <div class="lf-product-card__info">
+                        <p class="lf-product-card__title">Tất vớ nam nữ cao cổ co giãn bốn chiều...</p>
+                         <div class="lf-product-card__labels">
+                              <span class="lf-tag lf-tag--promo">Rẻ Vô Địch</span>
+                         </div>
+                        <div class="lf-product-card__price">
+                            <span class="lf-product-card__current-price">₫5.500</span>
+                        </div>
+                        <p class="lf-product-card__sold-count">Đã bán 155,1k</p>
+                    </div>
+                </div>
+
+                <div class="lf-product-card">
+                     <div class="lf-product-card__image-wrapper">
+                        <img class="lf-product-card__image" src="https://via.placeholder.com/188x188.png?text=Sản+phẩm+3" alt="Áo Thun">
+                         <span class="lf-product-card__badge lf-product-card__badge--discount">-72%</span>
+                         <span class="lf-tag lf-tag--favorite">Yêu thích</span>
+                     </div>
+                    <div class="lf-product-card__info">
+                        <p class="lf-product-card__title">Áo Thun Nữ Baby Tee Trơn Đơn Giản, Basi...</p>
+                         <div class="lf-product-card__labels">
+                             <span class="lf-tag lf-tag--promo">Rẻ Vô Địch</span>
+                             <span class="lf-tag lf-tag--mall">Mall</span>
+                         </div>
+                        <div class="lf-product-card__price">
+                            <span class="lf-product-card__current-price">₫29.000</span>
+                        </div>
+                        <p class="lf-product-card__sold-count">Đã bán 48,9k</p>
+                    </div>
+                </div>
+
+                 <div class="lf-product-card">
+                     <div class="lf-product-card__image-wrapper">
+                        <img class="lf-product-card__image" src="https://via.placeholder.com/188x188.png?text=Sản+phẩm+4" alt="Áo thun nữ">
+                         <span class="lf-product-card__badge lf-product-card__badge--discount">-42%</span>
+                         <span class="lf-tag lf-tag--favorite">Yêu thích</span>
+                     </div>
+                    <div class="lf-product-card__info">
+                        <p class="lf-product-card__title">Áo thun nữ dáng babytee NGỰA 6 ĐÔ...</p>
+                         <div class="lf-product-card__labels">
+                             <span class="lf-tag lf-tag--promo">Rẻ Vô Địch</span>
+                         </div>
+                        <div class="lf-product-card__price">
+                            <span class="lf-product-card__current-price">₫29.000</span>
+                         </div>
+                        <p class="lf-product-card__sold-count">Đã bán 3,5k</p>
+                    </div>
+                </div>
+
+                 <div class="lf-product-card">
+                     <div class="lf-product-card__image-wrapper">
+                        <img class="lf-product-card__image" src="https://via.placeholder.com/188x188.png?text=Sản+phẩm+5" alt="Đầm thiết kế">
+                         <span class="lf-product-card__badge lf-product-card__badge--discount">-30%</span>
+                          <span class="lf-product-card__badge lf-product-card__badge--size">Bigsize 40-80kg</span>
+                         <span class="lf-tag lf-tag--favorite">Yêu thích</span>
+                     </div>
+                    <div class="lf-product-card__info">
+                        <p class="lf-product-card__title">Đầm thiết kế BIGSIZE Mèo Ú váy tiểu...</p>
+                         <div class="lf-product-card__labels">
+                             <span class="lf-tag lf-tag--promo">Giảm ₫10k</span>
+                         </div>
+                        <div class="lf-product-card__price">
+                            <span class="lf-product-card__current-price">₫199.000</span>
+                         </div>
+                        <p class="lf-product-card__sold-count">Đã bán 4,5k</p>
+                    </div>
+                </div>
+
+                </section>
+        </main>
+    </div>
+</body>
+   
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Về chúng tôi</h3>
+                <p>NgaLady Shop - Cửa hàng thời trang và mỹ phẩm hàng đầu dành cho phái đẹp.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liên kết nhanh</h3>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="#">Chính sách</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liên hệ</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Thành Phố Từ Sơn, Tỉnh Bắc Ninh</li>
+                    <li><i class="fas fa-phone"></i> +84 123 456 789</li>
+                    <li><i class="fas fa-envelope"></i> info@ngaladyshop.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 NgaLady Shop. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script src="pages/index.js"></script>
+    <script src="pages/cartdropdown.js"></script>
+</html>

@@ -1,10 +1,8 @@
-/**
- * Product Routes
- * 
- * This module defines API endpoints for product operations
- * and connects them to their respective controller functions.
- */
-
+Diff
+Copy
+Insert
+New
+// productRoutes.js
 const express = require('express');
 const {
   getProducts,
@@ -19,20 +17,24 @@ const {
 const { protect, authorize } = require('../middleware/auth');
 
 const router = express.Router();
+const { Product } = require('../models'); // Giả sử Product là model của bạn
 
-// Public routes
-router.get('/', getProducts);
-router.get('/top', getTopProducts);
-router.get('/featured', getFeaturedProducts);
-router.get('/:id', getProductById);
-
-// Protected routes (require authentication)
-router.post('/', protect, createProduct);
-router.put('/:id', protect, updateProduct);
-router.delete('/:id', protect, deleteProduct);
-router.post('/:id/reviews', protect, createProductReview);
-
-// Admin routes
-router.get('/admin/products', protect, authorize('admin'), getProducts);
+// GET /search?term=searchTerm
+router.get('/search', async (req, res) => {
+  const searchTerm = req.query.term;
+  
+  try {
+    const products = await Product.findAll({
+      where: {
+        name: {
+          [Op.like]: `%${searchTerm}%`
+        }
+      }
+    });
+    res.json(products);
+  } catch (error) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
 
 module.exports = router;

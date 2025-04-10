@@ -82,7 +82,7 @@ function autoSlideshow() {
   dots[slideIndex-1].className += " active";
   
   // Thiết lập hẹn giờ để gọi lại hàm này sau 2 giây
-  setTimeout(autoSlideshow, 2000); // Thay đổi ảnh sau 2 giây
+  setTimeout(autoSlideshow, 5000); // Thay đổi ảnh sau 2 giây
 }
 
 // Bắt đầu tự động trượt slide khi trang web tải

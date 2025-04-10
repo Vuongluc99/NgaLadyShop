@@ -163,7 +163,7 @@ nav ul li a {
 
 /* ----- SLIDESHOW ----- */
 .slideshow-container {
-  max-width: 80%; /* Reduced max-width to 80% */
+  max-width: 55%; /* Reduced max-width to 80% */
   position: relative;
   margin: 20px auto; /* Add margin top/bottom for spacing */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
@@ -180,8 +180,8 @@ nav ul li a {
 
 /* Chỉnh cho slide hiện ra đầy đủ */
 .mySlides img {
-    width: 100%;
-    height: 344px;
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+    height: 689px;
     object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
 }
 

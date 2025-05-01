@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node backend/server.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,12 @@
   "homepage": "https://github.com/Vuongluc99/NgaLadyShop#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "helmet": "^8.1.0",
+    "mongoose": "^8.14.0",
     "morgan": "^1.10.0",
-    "mysql2": "^3.14.0",
+    "mysql2": "^3.14.1",
     "sequelize": "^6.37.7"
   }
 }
